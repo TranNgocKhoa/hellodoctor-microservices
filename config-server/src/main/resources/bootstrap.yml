@@ -11,7 +11,7 @@ spring:
         git:
           uri: https://github.com/TranNgocKhoa/config-respo
           search-paths: config-files*
-          repos:
+          repos: # repos for profile, like: http://{domain}:{port}/{application-name}/development
             development:
               pattern:
                 - '*/development'
@@ -20,8 +20,12 @@ spring:
             local:
               pattern:
                 - '*/local'
+              # uri: file://${user.home}/config-repo
               uri: https://github.com/TranNgocKhoa/config-respo
               search-paths: config-files/local*
+
+        native: # set profile is native
+          search-locations: file:///H:/spring-framework/hellodoctor-microservices/config-server/config-respo
 
 
 
