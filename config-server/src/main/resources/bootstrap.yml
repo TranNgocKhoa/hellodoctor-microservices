@@ -27,5 +27,10 @@ spring:
         native: # set profile is native
           search-locations: file:///H:/spring-framework/hellodoctor-microservices/config-server/config-respo
 
-
+management:
+  endpoints:
+    jmx:
+      exposure:
+        include: health,info
+        exclude:
 
