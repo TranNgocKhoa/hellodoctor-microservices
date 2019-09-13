@@ -25,6 +25,8 @@
     <modules>
         <module>config-server</module>
         <module>discovery</module>
+        <module>gateway</module>
+        <module>dummy</module>
     </modules>
 
     <dependencies>
