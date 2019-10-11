@@ -1,0 +1,25 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hellodoctor.patient.account.mappers.UserMapper">
+
+        <select id="getUserDetailById" resultType="com.hellodoctor.patient.account.models.UserDetail">
+            SELECT  u.id,
+                    u.username,
+                    p.name,
+                    u.email,
+                    u.phone_number as phoneNumber,
+                    p.avatar_img as avatarImg,
+                    p.date_of_birth as dateOfBirth,
+                    p.gender,
+                    p.description,
+                    p.person_id_number as personIdNumber,
+                    p.address,
+                    p.height,
+                    p.weight
+            FROM user u left join profile p on u.id = p.user_id
+            <where>
+                u.id = #{userId}
+            </where>
+        </select>
+</mapper>
