@@ -1,12 +1,14 @@
 package com.hellodoctor.patient.account.models;
 
-import lombok.Builder;
-import lombok.Data;
+import lombok.*;
 
 import java.time.LocalDate;
 
-@Data
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
 public class UserRegister {
     private Long id;
     private String username;

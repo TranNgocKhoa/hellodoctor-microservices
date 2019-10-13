@@ -1,0 +1,41 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hellodoctor.patient.account.mappers.ProfileMapper">
+    <insert id="insertProfile" parameterType="com.hellodoctor.patient.account.models.UserRegister">
+        insert into profile
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            user_id,
+            <if test="avatarImg != null and avatarImg != ''">avatar_img,</if>
+            <if test="dateOfBirth != null">date_of_birth,</if>
+            <if test="name != null and name != ''">`name`,</if>
+            <if test="gender != null ">gender,</if>
+            profile_type
+        </trim>
+        values
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            #{id},
+            <if test="avatarImg != null and avatarImg != ''">#{avatarImg},</if>
+            <if test="dateOfBirth != null">#{dateOfBirth},</if>
+            <if test="name != null and name != ''">#{name},</if>
+            <if test="gender != null ">#{gender},</if>
+            'PAT'
+        </trim>
+    </insert>
+
+    <update id="updateProfileInformation" parameterType="com.hellodoctor.patient.account.models.UserDetail">
+        update profile
+        <set>
+            <if test="avatarImg != null">avatar_img = #{avatarImg},</if>
+            <if test="dateOfBirth != null">email = #{email},</if>
+            <if test="name != null">`name` = #{name},</if>
+            <if test="gender != null">gender = #{gender},</if>
+            <if test="description != null">`description` = #{description}</if>
+            <if test="personIdNumber != null">person_id_number = #{personIdNumber}</if>
+            <if test="address != null">address = #{address}</if>
+            <if test="height != null">height = #{height}</if>
+            <if test="weight != null">weight = #{weight}</if>
+        </set>
+        where user_id = #{id}
+    </update>
+</mapper>

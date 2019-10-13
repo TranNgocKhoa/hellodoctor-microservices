@@ -7,4 +7,9 @@ import reactor.core.publisher.Mono;
 public interface UserService {
 
     Mono<UserDetail> createPatientUser(UserRegister userRegister);
+
+    Mono<UserDetail> getPatientUserById(Long id);
+
+    Mono<UserDetail> updateUserInformation(UserDetail user);
+
 }
