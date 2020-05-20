@@ -1,36 +1,36 @@
-#Server port
-server:
-  port: 8888
-#Application Name
-spring:
-  application:
-    name: hellodoctor-configserver
-  cloud:
-    config:
-      server:
-        git:
-          uri: https://github.com/TranNgocKhoa/config-respo
-          search-paths: config-files*
-          repos: # repos for profile, like: http://{domain}:{port}/{application-name}/development
-            development:
-              pattern:
-                - '*/development'
-              uri: https://github.com/TranNgocKhoa/config-respo
-              search-paths: config-files/staging*
-            local:
-              pattern:
-                - '*/local'
-              # uri: file://${user.home}/config-repo
-              uri: https://github.com/TranNgocKhoa/config-respo
-              search-paths: config-files/local*
-
-        native: # set profile is native
-          search-locations: file:///H:/spring-framework/hellodoctor-microservices/config-server/config-respo
-
-management:
-  endpoints:
-    jmx:
-      exposure:
-        include: health,info
-        exclude:
-
+##Server port
+#server:
+#  port: 8888
+##Application Name
+#spring:
+#  application:
+#    name: hellodoctor-configserver
+#  cloud:
+#    config:
+#      server:
+#        git:
+#          uri: https://github.com/TranNgocKhoa/config-respo
+#          search-paths: config-files*
+#          repos: # repos for profile, like: http://{domain}:{port}/{application-name}/development
+#            development:
+#              pattern:
+#                - '*/development'
+#              uri: https://github.com/TranNgocKhoa/config-respo
+#              search-paths: config-files/staging*
+#            local:
+#              pattern:
+#                - '*/local'
+#              # uri: file://${user.home}/config-repo
+#              uri: https://github.com/TranNgocKhoa/config-respo
+#              search-paths: config-files/local*
+#
+#        native: # set profile is native
+#          search-locations: file:///H:/spring-framework/hellodoctor-microservices/config-server/config-respo
+#
+#management:
+#  endpoints:
+#    jmx:
+#      exposure:
+#        include: health,info
+#        exclude:
+#

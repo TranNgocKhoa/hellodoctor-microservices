@@ -1,3 +1,6 @@
 spring:
   application:
-    name: hellodoctor-dummy-service
+    name: dummy
+  cloud:
+    config:
+      uri: http://localhost:8888
