@@ -1,7 +1,6 @@
-# Name of the Naming Server
 spring:
   application:
-    name: hellodoctor-api-gateway
+    name: gateway
   cloud:
     config:
       uri: http://localhost:8888
