@@ -6,6 +6,7 @@ import reactor.core.publisher.Mono;
 
 @RestController
 public class DummyController {
+
     @GetMapping("/hello")
     public Mono<String> hello() {
         return Mono.just("Hello!");
