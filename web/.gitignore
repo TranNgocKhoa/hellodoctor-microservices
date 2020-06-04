@@ -1,4 +1,4 @@
-config-server/HELP.md
+HELP.md
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**
@@ -29,14 +29,3 @@ build/
 
 ### VS Code ###
 .vscode/
-
-### mvnw ###
-**/.mvn/**
-mvnw
-mvnw.cmd
-
-### gradlew ###
-**/.gradle/**
-**/gradlew
-**/gradlew.bat
-**/gradle/**
