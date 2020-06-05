@@ -1,4 +1,4 @@
-INSERT INTO `DEPARTMENT` (name, reg_nm, modi_nm) VALUES ('Da liễu', 'administrator', 'administrator');
+-- INSERT INTO `DEPARTMENT` (name, reg_nm, modi_nm) VALUES ('Da liễu', 'administrator', 'administrator');
 INSERT INTO `SYMPTOM` (name, reg_nm, modi_nm) VALUES ('Chăm sóc da', 'administrator', 'administrator');
 INSERT INTO department_symptom_mapping (department_id, symptom_id, reg_nm, modi_nm) VALUES ((SELECT ID FROM DEPARTMENT WHERE `NAME` = 'Da liễu'), LAST_INSERT_ID(), 'administrator', 'administrator');
 INSERT INTO `SYMPTOM` (name, reg_nm, modi_nm) VALUES ('Điều trị bệnh về da liễu', 'administrator', 'administrator');
